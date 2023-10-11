@@ -1,0 +1,23 @@
+body {
+    background-color: blueviolet;
+}
+header {
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    .nav {
+        font-size: large;
+        color: white;
+        .kepala-nav {
+            position: relative
+            ;
+            display: block;
+            padding: 20px;
+            margin: auto;
+        }
+    }
+    .logo {
+        width: 200px;
+        object-fit: cover;
+    }
+}
