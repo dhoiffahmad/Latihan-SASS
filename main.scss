@@ -1,3 +1,15 @@
+
+// Nesting
+Header ul {
+    li {
+        background-color: black;
+        padding: 2px;
+        a {
+            color: white;
+        }
+    }
+}
+
 // CSS Variable
 ::root{
     --warna-utama: white;
@@ -6,9 +18,48 @@
 }
 
 // SASS  Variable
-$warna-utama: rgb(220, 220, 220);
+$warna-utama: white;
 $warna-kedua: rgb(0, 53, 56);
 $warna-teks: rgb(246, 255, 0);
+
+
+// Mixin -Simple
+@mixin inline-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+    }
+}
+header ul {
+    @include inline-list()
+}
+
+
+// Argumens Pada Mixiin
+@mixin flex-box ($direction: row, $space: center) {
+    display: flex;
+    justify-content: $space;
+    align-items: center;
+    flex-direction: $direction
+}
+
+main {
+    .container {
+        @include flex-box(row-reverse, space-evenly);
+        width: 600px;
+        height: 400px;
+        background-color: rgb(8, 85, 45);
+        .box {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(4, 150, 190);
+            text-align: center;
+            line-height: 60px;
+        }
+    }   
+}
 
 
 

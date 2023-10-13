@@ -1,3 +1,43 @@
+Header ul li {
+  background-color: black;
+  padding: 2px;
+}
+Header ul li a {
+  color: white;
+}
+
+::root {
+  --warna-utama: white;
+  --warna-kedua: black;
+  --warna-teks: blue;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header ul li {
+  display: inline-block;
+}
+
+main .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 600px;
+  height: 400px;
+  background-color: rgb(8, 85, 45);
+}
+main .container .box {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(4, 150, 190);
+  text-align: center;
+  line-height: 60px;
+}
+
 body {
   background-color: rgb(203, 230, 207);
   margin: 0;
